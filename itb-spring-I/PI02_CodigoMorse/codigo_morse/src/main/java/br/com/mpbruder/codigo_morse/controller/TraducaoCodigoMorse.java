@@ -24,7 +24,7 @@ public class TraducaoCodigoMorse {
                 "-.-", ".-..", "--", "-.", "---",
                 ".--.", "--.-", ".-.", "...", "-",
                 "..-", "...-", ".--", "-..-", "-.--",
-                "--..", "|" };
+                "--.." };
 
         String[] morseCodeArray = morseCode.split(" ");
 
@@ -32,6 +32,10 @@ public class TraducaoCodigoMorse {
             for (int j = 0; j < code.length; j++) {
                 if (s.compareTo(code[j]) == 0) {
                     textConverted.append((char) (j + 'a'));
+                    break;
+                }
+                if(s.compareTo("") == 0) {
+                    textConverted.append(" ");
                     break;
                 }
             }
