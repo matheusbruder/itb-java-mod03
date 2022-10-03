@@ -2,7 +2,6 @@ package br.com.mpbruder.terceiro_exemplo.repository;
 
 import br.com.mpbruder.terceiro_exemplo.model.Veiculo;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Repository;
 
 import java.io.File;
