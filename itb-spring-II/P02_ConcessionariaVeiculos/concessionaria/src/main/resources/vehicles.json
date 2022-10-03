@@ -1,83 +1,107 @@
-[ {
-  "brand" : "Chevrolet",
-  "model" : "Corsa",
-  "manufacturingDate" : 938908800000,
-  "numberOfKilometers" : 150000.0,
-  "doors" : 5,
-  "price" : 10000.0,
-  "currency" : "BR",
-  "services" : [ {
-    "date" : 1105574400000,
-    "kilometers" : 90000.0,
-    "description" : "Change air filters"
-  } ],
-  "countOfOwners" : 4
-}, {
-  "brand" : "Chevrolet",
-  "model" : "Onix",
-  "manufacturingDate" : 1386028800000,
-  "numberOfKilometers" : 45000.0,
-  "doors" : 5,
-  "price" : 95000.0,
-  "currency" : "BR",
-  "services" : [ {
-    "date" : 1434499200000,
-    "kilometers" : 27000.0,
-    "description" : "Change fuel filter"
-  } ],
-  "countOfOwners" : 1
-}, {
-  "brand" : "Fiat",
-  "model" : "Uno",
-  "manufacturingDate" : 1067904000000,
-  "numberOfKilometers" : 250000.0,
-  "doors" : 3,
-  "price" : 18000.0,
-  "currency" : "BR",
-  "services" : [ {
-    "date" : 1123027200000,
-    "kilometers" : 100000.0,
-    "description" : "Change tires"
-  }, {
-    "date" : 1238889600000,
-    "kilometers" : 140000.0,
-    "description" : "Change back door"
-  }, {
-    "date" : 1397865600000,
-    "kilometers" : 200000.0,
-    "description" : "New paint"
-  } ],
-  "countOfOwners" : 1
-}, {
-  "brand" : "Nissan",
-  "model" : "March",
-  "manufacturingDate" : 1349222400000,
-  "numberOfKilometers" : 80000.0,
-  "doors" : 5,
-  "price" : 65000.0,
-  "currency" : "BR",
-  "services" : [ {
-    "date" : 1667606400000,
-    "kilometers" : 70000.0,
-    "description" : "Change engine oil"
-  }, {
-    "date" : 1667865600000,
-    "kilometers" : 72000.0,
-    "description" : "Change engine oil again"
-  } ],
-  "countOfOwners" : 3
-}, {
-  "brand" : "Audi",
-  "model" : "A6",
-  "manufacturingDate" : 1641168000000,
-  "numberOfKilometers" : 2000.0,
-  "doors" : 3,
-  "price" : 450000.0,
-  "currency" : "BR",
-  "services" : [ {
-    "date" : 1640995200000,
-    "kilometers" : 1500.0,
-    "description" : "Update firmware"
-  } ],
-  "countOfOwners" : 0
-} ]
+[
+  {
+    "id": 1,
+    "brand": "Chevrolet",
+    "model": "Corsa",
+    "manufacturingDate": 938908800000,
+    "numberOfKilometers": 150000.0,
+    "doors": 5,
+    "price": 10000.0,
+    "currency": "BR",
+    "services": [
+      {
+        "date": 1105574400000,
+        "kilometers": 90000.0,
+        "description": "Change air filters"
+      }
+    ],
+    "countOfOwners": 4
+  },
+  {
+    "id": 4,
+    "brand": "Chevrolet",
+    "model": "Onix",
+    "manufacturingDate": 1386028800000,
+    "numberOfKilometers": 45000.0,
+    "doors": 5,
+    "price": 95000.0,
+    "currency": "BR",
+    "services": [
+      {
+        "date": 1434499200000,
+        "kilometers": 27000.0,
+        "description": "Change fuel filter"
+      }
+    ],
+    "countOfOwners": 1
+  },
+  {
+    "id": 3,
+    "brand": "Fiat",
+    "model": "Uno",
+    "manufacturingDate": 1067904000000,
+    "numberOfKilometers": 250000.0,
+    "doors": 3,
+    "price": 18000.0,
+    "currency": "BR",
+    "services": [
+      {
+        "date": 1123027200000,
+        "kilometers": 100000.0,
+        "description": "Change tires"
+      },
+      {
+        "date": 1238889600000,
+        "kilometers": 140000.0,
+        "description": "Change back door"
+      },
+      {
+        "date": 1397865600000,
+        "kilometers": 200000.0,
+        "description": "New paint"
+      }
+    ],
+    "countOfOwners": 1
+  },
+  {
+    "id": 4,
+    "brand": "Nissan",
+    "model": "March",
+    "manufacturingDate": 1349222400000,
+    "numberOfKilometers": 80000.0,
+    "doors": 5,
+    "price": 65000.0,
+    "currency": "BR",
+    "services": [
+      {
+        "date": 1667606400000,
+        "kilometers": 70000.0,
+        "description": "Change engine oil"
+      },
+      {
+        "date": 1667865600000,
+        "kilometers": 72000.0,
+        "description": "Change engine oil again"
+      }
+    ],
+    "countOfOwners": 3
+  },
+  {
+    "id": 5,
+    "brand": "Audi",
+    "model": "A6",
+    "manufacturingDate": 1641168000000,
+    "numberOfKilometers": 2000.0,
+    "doors": 3,
+    "price": 450000.0,
+    "currency": "BR",
+    "services": [
+      {
+        "date": 1640995200000,
+        "kilometers": 1500.0,
+        "description": "Update firmware"
+      }
+    ],
+    "countOfOwners": 0
+  }
+]

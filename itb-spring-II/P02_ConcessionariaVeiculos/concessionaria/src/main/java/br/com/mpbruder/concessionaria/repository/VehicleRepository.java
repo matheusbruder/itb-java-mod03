@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class VehicleRepository {
@@ -26,6 +27,7 @@ public class VehicleRepository {
         // Adicionar novo veículo
         List<Vehicle> vehicleList = readFile(linkFile);
         vehicleList = new ArrayList<>(vehicleList);
+        vehicle.setId(vehicleList.size() + 1);
         vehicleList.add(vehicle);
 
         // Gravar no arquivo
@@ -45,6 +47,13 @@ public class VehicleRepository {
             vehicleDtoList.add(new VehicleDto(vehicle));
         }
         return vehicleDtoList;
+    }
+
+    public Optional<Vehicle> getVehicleById(int id) {
+        List<Vehicle> vehicleList = readFile(linkFile);
+        return vehicleList.stream()
+                .filter(v -> v.getId() == id)
+                .findFirst();
     }
 
     public List<Vehicle> readFile(String linkFile) {

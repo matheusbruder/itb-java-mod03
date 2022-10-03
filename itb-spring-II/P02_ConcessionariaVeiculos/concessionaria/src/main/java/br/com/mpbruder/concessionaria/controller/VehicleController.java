@@ -45,9 +45,10 @@ public class VehicleController {
         return new ResponseEntity<>(vehicleDtoList, HttpStatus.OK);
     }
 
-//    @GetMapping("/{id}")
-//    public ResponseEntity<Vehicle> getVehicle(@PathVariable String id) {
-//
-//    }
+    @GetMapping("/{id}")
+    public ResponseEntity<Vehicle> getVehicle(@PathVariable int id) {
+        Vehicle vehicle = vehicleService.getVehicleById(id);
+        return new ResponseEntity<>(vehicle, HttpStatus.FOUND);
+    }
 
 }

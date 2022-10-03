@@ -16,5 +16,5 @@ public interface IVehicleService {
 
     List<VehicleDto> getAllVehiclesByPrice(double from, double to);
 
-    //Vehicle getVehicleById();
+    Vehicle getVehicleById(int id);
 }

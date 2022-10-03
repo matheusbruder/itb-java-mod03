@@ -6,10 +6,10 @@ import br.com.mpbruder.concessionaria.repository.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class VehicleService implements IVehicleService {
@@ -41,5 +41,14 @@ public class VehicleService implements IVehicleService {
                 .filter(v -> v.getPrice() >= since && v.getPrice() <= to)
                 .sorted(Comparator.comparing(VehicleDto::getPrice))
                 .toList();
+    }
+
+    @Override
+    public Vehicle getVehicleById(int id) {
+        Optional<Vehicle> vehicle = vehicleRepository.getVehicleById(id);
+        if (vehicle.isEmpty()) {
+
+        }
+        return vehicle.get();
     }
 }

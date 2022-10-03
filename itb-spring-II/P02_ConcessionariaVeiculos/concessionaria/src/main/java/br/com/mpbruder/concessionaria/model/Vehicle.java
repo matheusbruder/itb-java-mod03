@@ -13,6 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Vehicle {
+    private int id;
     private String brand;
     private String model;
     private Date manufacturingDate;
