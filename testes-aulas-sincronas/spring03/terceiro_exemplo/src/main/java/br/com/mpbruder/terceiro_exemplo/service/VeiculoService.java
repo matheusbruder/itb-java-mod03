@@ -26,7 +26,11 @@ public class VeiculoService implements IVeiculo {
     }
 
     @Override
-    public List<Veiculo> getAllVeiculo() {
-        return null;
+    public List<Veiculo> getAllVeiculo() throws VehicleNotFoundException {
+        Optional<List<Veiculo>> optionalVeiculoList = veiculoRepo.getAllVeiculo();
+        if(optionalVeiculoList.isEmpty()) {
+            throw new VehicleNotFoundException("Veículo não encontrado");
+        }
+        return optionalVeiculoList.get();
     }
 }

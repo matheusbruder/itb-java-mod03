@@ -8,6 +8,6 @@ import java.util.List;
 public interface IVeiculo {
 
     Veiculo getVeiculo(String placa) throws VehicleNotFoundException;
-    List<Veiculo> getAllVeiculo();
+    List<Veiculo> getAllVeiculo() throws VehicleNotFoundException;
 
 }

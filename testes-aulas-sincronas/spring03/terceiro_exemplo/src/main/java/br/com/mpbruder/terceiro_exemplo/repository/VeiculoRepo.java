@@ -31,4 +31,20 @@ public class VeiculoRepo {
         }
         return Optional.empty();
     }
+
+    public Optional<List<Veiculo>> getAllVeiculo() {
+        List<Veiculo> veiculoList = null;
+
+        try {
+            veiculoList = Arrays.asList(objectMapper.readValue(new File(linkFile), Veiculo[].class));
+        } catch (Exception ex) {
+
+        }
+
+        if (veiculoList.isEmpty()) {
+            return Optional.empty();
+        } else {
+            return Optional.of(veiculoList);
+        }
+    }
 }

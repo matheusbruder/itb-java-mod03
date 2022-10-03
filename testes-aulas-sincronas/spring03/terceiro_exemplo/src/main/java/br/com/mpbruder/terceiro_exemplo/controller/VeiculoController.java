@@ -32,8 +32,13 @@ public class VeiculoController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Veiculo>> getAllVeiculos() {
-        List<Veiculo> veiculoList = veiculoService.getAllVeiculo();
-        return new ResponseEntity<>(veiculoList, HttpStatus.OK);
+
+        try {
+            List<Veiculo> veiculoList = veiculoService.getAllVeiculo();
+            return new ResponseEntity<>(veiculoList, HttpStatus.OK);
+        } catch (VehicleNotFoundException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
 }
