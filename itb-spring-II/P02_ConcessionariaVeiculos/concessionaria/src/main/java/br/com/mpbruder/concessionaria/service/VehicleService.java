@@ -1,6 +1,7 @@
 package br.com.mpbruder.concessionaria.service;
 
 import br.com.mpbruder.concessionaria.VehicleDto;
+import br.com.mpbruder.concessionaria.exception.NotFoundException;
 import br.com.mpbruder.concessionaria.model.Vehicle;
 import br.com.mpbruder.concessionaria.repository.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,30 +25,48 @@ public class VehicleService implements IVehicleService {
 
     @Override
     public List<VehicleDto> getAllVehicles() {
-        return vehicleRepository.getAllVehicles();
+        List<VehicleDto> vehicles = vehicleRepository.getAllVehicles();
+
+        if (vehicles.isEmpty()) {
+            throw new NotFoundException("Lista de veículos vazia");
+        }
+
+        return vehicles;
     }
 
     @Override
     public List<VehicleDto> getAllVehiclesByManufacturingDate(Date since, Date to) {
-        return vehicleRepository.getAllVehicles().stream()
+        List<VehicleDto> vehicles = vehicleRepository.getAllVehicles().stream()
                 .filter(v -> v.getManufacturingDate().after(since) && v.getManufacturingDate().before(to))
                 .sorted(Comparator.comparing(VehicleDto::getManufacturingDate))
                 .toList();
+
+        if (vehicles.isEmpty()) {
+            throw new NotFoundException("Lista de veículos vazia");
+        }
+
+        return vehicles;
     }
 
     @Override
     public List<VehicleDto> getAllVehiclesByPrice(double since, double to) {
-        return vehicleRepository.getAllVehicles().stream()
+        List<VehicleDto> vehicles = vehicleRepository.getAllVehicles().stream()
                 .filter(v -> v.getPrice() >= since && v.getPrice() <= to)
                 .sorted(Comparator.comparing(VehicleDto::getPrice))
                 .toList();
+
+        if (vehicles.isEmpty()) {
+            throw new NotFoundException("Lista de veículos vazia");
+        }
+
+        return vehicles;
     }
 
     @Override
     public Vehicle getVehicleById(int id) {
         Optional<Vehicle> vehicle = vehicleRepository.getVehicleById(id);
         if (vehicle.isEmpty()) {
-
+            throw new NotFoundException("Veículo [" + id + "] não encontrado");
         }
         return vehicle.get();
     }
