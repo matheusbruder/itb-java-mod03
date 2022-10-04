@@ -14,4 +14,5 @@ public class Veiculo {
     private String modelo;
     private int ano;
     private double valor;
+    private int id_proprietario;
 }

@@ -2,25 +2,30 @@
   "placa" : "ABC1234",
   "modelo" : "Opala",
   "ano" : 1970,
-  "valor" : 23000.0
+  "valor" : 23000.0,
+  "id_proprietario" : 1
 }, {
   "placa" : "DEF4321",
   "modelo" : "Opala",
   "ano" : 1990,
-  "valor" : 43000.0
+  "valor" : 43000.0,
+  "id_proprietario" : 2
 }, {
   "placa" : "XYZ8888",
   "modelo" : "Civic",
   "ano" : 1998,
-  "valor" : 10000.0
+  "valor" : 10000.0,
+  "id_proprietario" : 2
 }, {
   "placa" : "AAA8888",
   "modelo" : "Corolla",
   "ano" : 1997,
-  "valor" : 12000.0
+  "valor" : 12000.0,
+  "id_proprietario" : 1
 }, {
   "placa" : "FLG8809",
   "modelo" : "Onix",
   "ano" : 2005,
-  "valor" : 77000.0
+  "valor" : 77000.0,
+  "id_proprietario" : 3
 } ]
