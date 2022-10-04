@@ -2,12 +2,14 @@ package br.com.mpbruder.blog.service;
 
 import br.com.mpbruder.blog.model.Blog;
 
-import java.util.List;
+import java.util.HashMap;
 
 public interface IBlogService {
 
     Blog newPost(Blog post);
+
     Blog getPost(int id);
-    List<Blog> getAllPosts();
+
+    HashMap<Integer, Blog> getAllPosts();
 
 }
